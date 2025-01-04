@@ -2,7 +2,6 @@
 https://github.com/user-attachments/assets/028ebb74-2b08-42ba-bcc6-fc91781676a3
 
 
-![4](https://github.com/user-attachments/assets/ea44a8fb-af29-44ec-82b6-8523acf11cc5)
 ![1](https://github.com/user-attachments/assets/7a5324b0-92a7-46ab-8430-3bd62be2def9)
 ![3](https://github.com/user-attachments/assets/32bff064-2c01-444e-ba0e-b85a3aadb8ff)
 ![2](https://github.com/user-attachments/assets/4a6c93b5-65cd-430b-86d9-68e5b5b98a26)
