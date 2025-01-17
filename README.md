@@ -7,7 +7,8 @@ https://github.com/user-attachments/assets/028ebb74-2b08-42ba-bcc6-fc91781676a3
 ![2](https://github.com/user-attachments/assets/4a6c93b5-65cd-430b-86d9-68e5b5b98a26)
 ![4](https://github.com/user-attachments/assets/f9c75d2b-7c69-49e3-8e08-ff11ea54423d)
 ![5](https://github.com/user-attachments/assets/b3b4dad3-9639-4f46-9db0-720547eccb5e)
-![6](https://github.com/user-attachments/assets/d201e5fa-0e9a-4651-ae32-d5d887efb07d)
+![Ekran Alıntısı](https://github.com/user-attachments/assets/ae626291-7e66-4ffa-b216-878b6e0f6176)
+
 
 
 
