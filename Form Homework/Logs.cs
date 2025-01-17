@@ -16,7 +16,7 @@ namespace Form_Homework
         [MinLength(6, ErrorMessage = "Şifre en az 6 karakter olmalıdır.")]
         public string Sifre { get; set; }
         public DateTime SistemGirisTarih { get; set; }
-        public int BeniHatırla { get; set; }
+        public bool BeniHatırla { get; set; }
         public string IPAdress {  get; set; }
         public override string ToString()
         {
