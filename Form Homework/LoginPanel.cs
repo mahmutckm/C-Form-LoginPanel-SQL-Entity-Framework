@@ -59,18 +59,18 @@ namespace Form_Homework
         {
             if (string.IsNullOrEmpty(txtbox_tc.Text) || string.IsNullOrEmpty(txtbox_password.Text))
             {
-                MessageBox.Show("Alanlarý Doldurunuz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("AlanlarÃ½ Doldurunuz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             string tc = txtbox_tc.Text;
             string sifre = txtbox_password.Text;
-            var kullanýcý = db.Users.FirstOrDefault(i => i.TC == tc && i.Sifre == sifre);
-            if (kullanýcý == null)
+            var kullanÃ½cÃ½ = db.Users.FirstOrDefault(i => i.TC == tc && i.Sifre == sifre);
+            if (kullanÃ½cÃ½ == null)
             {
                 hak--;
                 if (hak == 0)
                 {
-                    MessageBox.Show("Üç kere hatalý giriþ yaptýðýnýz için sistem 10 saniye kilitlendi lütfen bekleyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ÃœÃ§ kere hatalÃ½ giriÃ¾ yaptÃ½Ã°Ã½nÃ½z iÃ§in sistem 10 saniye kilitlendi lÃ¼tfen bekleyiniz", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     btn_clean.Enabled = false;
                     btn_login.Enabled = false;
                     btn_register.Enabled = false;
@@ -86,7 +86,7 @@ namespace Form_Homework
                     lbl_changepass.Enabled = true;
                     return;
                 }
-                MessageBox.Show("Giriþ Bilgileri Hatalý! Kalan hak=> " + hak, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("GiriÃ¾ Bilgileri HatalÃ½! Kalan hak=> " + hak, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btn_clean_Click(sender, e);
             }
             else
@@ -96,12 +96,12 @@ namespace Form_Homework
                 logs.TC = tc;
                 logs.Sifre = sifre;
                 logs.SistemGirisTarih=DateTime.Now;
-                logs.BeniHatýrla = checkBox1.Checked ? 1 : 0;
+                logs.BeniHatÃ½rla = checkBox1.Checked ? true : false;
                 logs.IPAdress= ipAddress;
                 db.Logs.Add(logs);
                 db.SaveChanges();
-                MessageBox.Show("Giriþ Baþarýlý", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show("Hoþgeldin " + kullanýcý.Ad, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("GiriÃ¾ BaÃ¾arÃ½lÃ½", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("HoÃ¾geldin " + kullanÃ½cÃ½.Ad, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Thread.Sleep(1000);
                 this.Hide();
                 MainForm form = new MainForm();
@@ -111,7 +111,7 @@ namespace Form_Homework
         private void LoginPanel_Load(object sender, EventArgs e)
         {
             var lastLog = db.Logs.OrderByDescending(l => l.Id).FirstOrDefault();
-            if (lastLog != null && lastLog.BeniHatýrla == 1)
+            if (lastLog != null && lastLog.BeniHatÃ½rla == true)
             {
                 txtbox_tc.Text = lastLog.TC;
                 txtbox_password.Text = lastLog.Sifre;
